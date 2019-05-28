@@ -14,7 +14,7 @@ if [[ -z "$1" ]];then
 	echo "Digite ./backup.sh backup para fazer backup e ./backup.sh restore para restaurar o ultimo backup. Utilize ./backup.sh crontab para adicionar script no contrab"
 fi
 
-#Declarando o que o comando backup ira fazer o backup e gerar um log 
+#Comando de backup e log
 if [[ $COMANDO == backup ]]; then
 	if [[ -n "$(uname -a | grep Debian)" ]]; then
 		echo "Iniciando backup em $DATA" >> $DIRDEST/backup.txt
